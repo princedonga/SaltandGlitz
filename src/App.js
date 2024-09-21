@@ -1,15 +1,25 @@
-import React from 'react'
-import Layout from './Components/Layout'
-import "./App.css"
-// import ImportExcel from './Pages/ImportExcel'
+import React, { useState, useEffect } from 'react';
+import Layout from './Components/Layout';
+import Preloader from './Components/Preloader';
+import "./App.css";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);  // Adjust time as needed
+
+    return () => clearTimeout(timer);  // Cleanup on unmount
+  }, []);
+
   return (
     <div>
-      {/* <ImportExcel></ImportExcel> */}
-      <Layout></Layout>
+      {loading ? <Preloader /> : <Layout />}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
