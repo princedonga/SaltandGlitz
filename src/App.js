@@ -10,7 +10,7 @@ const App = () => {
     // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000);  // Adjust time as needed
+    }, 5000);  // Adjust time as needed
 
     return () => clearTimeout(timer);  // Cleanup on unmount
   }, []);
