@@ -74,7 +74,7 @@ div:where(.swal2-container) .swal2-html-container {
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 20px;
-    background: #0dcaf0;
+    background: linear-gradient(to right, #de57e5 0%, #8863fb 100%);
     position: relative;
   /*   shorthand animation property: name | duration | iteration count */
   /*   animation: text 4s 1; */
